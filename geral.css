@@ -1,0 +1,220 @@
+.body{
+    background-color: #0e0024;
+}
+
+.container{
+    justify-content: center;
+}
+/* Estilo para a imagem circular na barra de navegação */
+.header-image {
+    width: 30px; /* Largura da imagem */
+    height: 30px; /* Altura da imagem */
+    border-radius: 50%; /* Define a forma circular */
+    object-fit: cover; /* Garante que a imagem se ajuste ao círculo */
+}
+
+  /* Estilo para o contêiner da imagem na barra de navegação (opcional) */
+  .header {
+    overflow: hidden; /* Oculta qualquer parte da imagem que exceda o círculo */
+    background-color: #f86300;
+    padding: 10px;
+  }
+
+/*classe para alinhar botões da barra de navegação*/
+.collumn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.collumn2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font-family: Rantera;
+}
+
+/*Classe para botões da barra de navegação*/
+.btn-header{
+    font-size: larger;
+    border: none;
+    outline: none;
+    color: white;
+    background: #f86300;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.btn-header-active{
+    font-size: larger;
+    border: none;
+    outline: none;
+    color: black;
+    background: #f86300;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+.btn-header:before {
+    content: '';
+    background: linear-gradient(45deg, #0e0024, #663aa3, #a991db, #663aa3, #0e0024);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 8px;
+}
+
+.btn-header-active:before {
+    content: '';
+    background: linear-gradient(45deg, #0e0024, #663aa3, #a991db, #663aa3, #0e0024);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 8px;
+}
+.btn-header:active {
+    color: #000;
+}
+.btn-header:active:after {
+    background: transparent;
+}
+
+.btn-header-active:active:after {
+    background: transparent;
+}
+.btn-header:hover:before {
+    opacity: 1;
+}
+
+.btn-header-active:hover:before {
+    opacity: 1;
+}
+.btn-header:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f86300;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.btn-header-active:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f86300;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.img-anuncio{
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.divBusca{
+    background-color:#0e0024;
+    border:inset 0px #0e0024;
+    border-radius:30%;
+    width:100%;
+}
+
+.txtBusca{
+    float:left;
+    color: #a991db;
+    background-color: #0e0024;
+    padding-left:5px;
+    font-size:18px;
+    border-radius: 30px;
+    border: inset 1px #0e0024;
+    width:100%;
+}
+
+/*Classe para botões da barra de navegação*/
+.btn-footer{
+    font-size: larger;
+    border: none;
+    outline: none;
+    color: #0e0024;
+    background-color: rgba(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+.btn-footer:before {
+    content: '';
+    background: linear-gradient(45deg, #0e0024, #663aa3, #a991db, #663aa3, #0e0024);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 8px;
+}
+.btn-footer:active {
+    color: #000;
+}
+.btn-footer:active:after {
+    background: transparent;
+}
+.btn-footer:hover:before {
+    opacity: 1;
+}
+.btn-footer:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
